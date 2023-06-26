@@ -1,6 +1,6 @@
 const express = require("express");
-const taskRouter = require("./routers/taskRouter");
-const reportsRouter = require("./routers/reportsRouter");
+const taskRouter = require("./router/taskRouter");
+const reportsRouter = require("./router/reportsRouter");
 
 const stageName = process.env.stageName;
 
