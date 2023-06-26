@@ -1,5 +1,5 @@
 const express = require("express");
-const userRouter = require("./routers/userRouter");
+const taskRouter = require("./routers/taskRouter");
 const reportsRouter = require("./routers/reportsRouter");
 
 const stageName = process.env.stageName;
@@ -17,7 +17,7 @@ const responseMiddleware = require("./middlewares/responseMiddleware");
 app.use(responseMiddleware);
 
 
-app.use(`/${stageName}/auth`, userRouter);
+app.use(`/${stageName}/task`, taskRouter);
 
 const errorMiddleware = require("./middlewares/errorMiddleware");
 app.use(errorMiddleware);
